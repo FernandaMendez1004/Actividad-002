@@ -6,7 +6,7 @@ do
 {
     Console.WriteLine("Ingrese una opcion correcta");
     correcto = int.TryParse(Console.ReadLine(), out opcion);
-    
+
     switch (opcion)
     {
         case 1:
@@ -21,7 +21,8 @@ do
             if (ciudades.Count == 0)
             { Console.WriteLine("No hay ciudades agregadas"); }
             else
-            { int contador = 1;
+            {
+                int contador = 1;
                 foreach (string ciudad in ciudades)
                 {
                     Console.WriteLine($"{contador}- {ciudad}");
@@ -33,7 +34,8 @@ do
             Console.WriteLine("Ingrese el nombre de la ciudad a buscar");
             string buscar = Console.ReadLine();
             if (ciudades.Contains(buscar))
-            { Console.WriteLine("la ciudad existe");
+            {
+                Console.WriteLine("la ciudad existe");
                 Console.WriteLine($"Possicion {ciudades.IndexOf(buscar)}");
             }
             else
@@ -48,18 +50,35 @@ do
                 int posicion = ciudades.IndexOf(modificar);
                 Console.WriteLine("Ingrese el nuevo nombre");
                 ciudades[posicion] = Console.ReadLine();
-                Console.WriteLine( "Ciudad actualizada");
-             }
+                Console.WriteLine("Ciudad actualizada");
+            }
             else
             {
                 Console.WriteLine("Ciudad no existe");
-            }break;
+            }
+            break;
         case 5:
             Console.WriteLine("Ingrese el nombre de la ciudad a eliminar");
             string eliminar = Console.ReadLine();
             if (ciudades.Contains(eliminar))
             {
-                ciu
+                ciudades.Remove(eliminar);
+                Console.WriteLine("Ciudad eiminada");
             }
+            else
+            { Console.WriteLine("La ciudad no existe"); }
+            break;
 
+        case 6:
+            Console.WriteLine($"Total de estudiantes {ciudades.Count}");
+            break;
+        case 7:
+            Console.WriteLine("Saliendo del programa");
+            break;
+        default:
+            Console.WriteLine("No existe esta opcion");
+            break;
+
+
+    }
 } while (opcion != 7); 
