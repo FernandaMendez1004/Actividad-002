@@ -35,7 +35,7 @@ Productos registrados");
             }
             else
             { int contador = 1;
-                foreach (string prodducto in productos)
+                foreach (string producto in productos)
                 {
                     Console.WriteLine($"{contador}- {productos}");
                 }
