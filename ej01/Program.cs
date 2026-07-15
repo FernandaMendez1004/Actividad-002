@@ -27,10 +27,28 @@ Ingrese el nombre del producto");
             Console.ReadKey();
             break;
         case 2:
-            
+            Console.WriteLine(@"Mostrar todos los productos registrados
+Productos registrados");
+            if (productos.Count == 0)
+            {
+                Console.WriteLine("Aun no se han registrado productos");
+            }
+            else
+            { int contador = 1;
+                foreach (string prodducto in productos)
+                {
+                    Console.WriteLine($"{contador}- {productos}");
+                }
+            }        
             break;
         case 3:
-            
+            Console.WriteLine(@"Buscar un producto por su nombre
+Ingrese el nombre del producto");
+            string buscar = Console.ReadLine();
+            if (productos.Contains(buscar))
+            {
+                Console.WriteLine("Producto en existenciA");
+            }
             break;
         case 4:
             
@@ -47,7 +65,7 @@ Ingrese el nombre del producto");
         default:
             Console.WriteLine("Opcion no encontrada ingrese un numero del 1 al 7");
             break;
-    })
+    }
 
 }
 while (opcion != 7);
