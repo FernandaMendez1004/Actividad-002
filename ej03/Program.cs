@@ -39,4 +39,27 @@ do
             else
             { Console.WriteLine("La ciudad no existe"); }
             break;
+
+        case 4:
+            Console.WriteLine("Ingrese el nombre de la ciudad a modificar");
+            string modificar = Console.ReadLine();
+            if (ciudades.Contains(modificar))
+            {
+                int posicion = ciudades.IndexOf(modificar);
+                Console.WriteLine("Ingrese el nuevo nombre");
+                ciudades[posicion] = Console.ReadLine();
+                Console.WriteLine( "Ciudad actualizada");
+             }
+            else
+            {
+                Console.WriteLine("Ciudad no existe");
+            }break;
+        case 5:
+            Console.WriteLine("Ingrese el nombre de la ciudad a eliminar");
+            string eliminar = Console.ReadLine();
+            if (ciudades.Contains(eliminar))
+            {
+                ciu
+            }
+
 } while (opcion != 7); 
