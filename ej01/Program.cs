@@ -47,8 +47,10 @@ Ingrese el nombre del producto");
             string buscar = Console.ReadLine();
             if (productos.Contains(buscar))
             {
-                Console.WriteLine("Producto en existenciA");
+                Console.WriteLine(@$"Producto en existenciA
+                se encuentra en la posicion {productos.IndexOf(buscar)}");
             }
+            else { Console.WriteLine("Producto no encontrado"); }
             break;
         case 4:
             
