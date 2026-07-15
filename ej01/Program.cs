@@ -65,10 +65,18 @@ Ingrese el nombre a modificar");
             else { Console.WriteLine("Producto no encontrado"); }
             break;
         case 5:
-            Console.WriteLine(@"");
+            Console.WriteLine(@"Eliminar un producto 
+Ingrese el nombre del producto que desea eliminar");
+            string eliminar = Console.ReadLine();
+            if (productos.Contains(eliminar))
+            {
+                productos.Remove(eliminar);
+                Console.WriteLine("Producto eliminado");
+            }
+            else { Console.WriteLine("Producto no encontrado"); }
             break;
         case 6:
-           
+            Console.WriteLine($"Total de estudiantes {productos.Count}");
             break;
         case 7:
             Console.WriteLine("Saliendo del programa...");
