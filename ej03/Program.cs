@@ -29,5 +29,14 @@ do
                 }
             }
             break;
-
+        case 3:
+            Console.WriteLine("Ingrese el nombre de la ciudad a buscar");
+            string buscar = Console.ReadLine();
+            if (ciudades.Contains(buscar))
+            { Console.WriteLine("la ciudad existe");
+                Console.WriteLine($"Possicion {ciudades.IndexOf(buscar)}");
+            }
+            else
+            { Console.WriteLine("La ciudad no existe"); }
+            break;
 } while (opcion != 7); 
