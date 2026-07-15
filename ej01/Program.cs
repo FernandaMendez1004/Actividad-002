@@ -53,10 +53,19 @@ Ingrese el nombre del producto");
             else { Console.WriteLine("Producto no encontrado"); }
             break;
         case 4:
-            
+            Console.WriteLine(@"Modificar el nombre de un producto existente
+Ingrese el nombre a modificar");
+            string modificar = Console.ReadLine();
+            if (productos.Contains(modificar))
+            { int posicion = productos.IndexOf(modificar);
+                Console.WriteLine("Ingrese el nuevo nombre");
+                productos[posicion] = Console.ReadLine();
+                Console.WriteLine("Actualizado");
+            }
+            else { Console.WriteLine("Producto no encontrado"); }
             break;
         case 5:
-            
+            Console.WriteLine(@"");
             break;
         case 6:
            
